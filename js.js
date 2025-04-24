@@ -18,3 +18,15 @@ let immutable = "junayet"
 let mutable = immutable
 mutable ='Rahim'
 console.log(immutable, mutable);
+
+// let users = 
+//   {  age: 25,name: "Rahim" }
+
+// for (let user of users) {
+//   console.log(user); 
+// }
+let person5 = {
+  name: "Rahim",
+  age: 25
+};
+console.log(Object.values(person5));
