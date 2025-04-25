@@ -36,3 +36,41 @@
 }
 const x = Math.max.apply(null, [1,2,3]);
 console.log(x);
+
+
+// callBack
+const paymentSucess =true
+const mark = 70
+
+function enroll (callBack)
+{
+  console.log('course Enrollment in is Progress')
+  setTimeout(() => {
+    if(paymentSucess){
+      callBack()
+    } else{
+      console.log("payment faild")
+    }
+  }, 2000);
+}
+
+function progress (callBack){
+  console.log('course on progess')
+  setTimeout(() => {
+    if(mark>=80){
+      callBack()
+    }else{
+      console.log('You could not get enough mark to the certicate');
+    }
+  },3000);
+}
+
+function getCertificate (){
+  console.log('preparing you cetificate');
+  setTimeout(function(){
+    console.log('congrate you certificate')
+  })
+}
+enroll(function(){
+  progress(getCertificate)
+})
